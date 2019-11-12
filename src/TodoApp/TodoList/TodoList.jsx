@@ -14,7 +14,14 @@ const TodoList = props => {
         {props.todos.map(todo => {
           return (
             <>
-              <Todo task={todo.task} key={todo.id} completed={todo.completed} />
+              <Todo
+                id={todo.id}
+                removeTodo={props.removeTodo}
+                task={todo.task}
+                key={todo.id}
+                completed={todo.completed}
+                toggleTodo={props.toggleTodo}
+              />
               <Divider />
             </>
           );
