@@ -11,7 +11,7 @@ const TodoList = props => {
   return (
     <Paper style={{ marginTop: "0px" }}>
       <List>
-        {props.todos.map(todo => {
+        {props.todos.map((todo, i) => {
           return (
             <>
               <Todo
@@ -23,7 +23,7 @@ const TodoList = props => {
                 toggleTodo={props.toggleTodo}
                 editTodo={props.editTodo}
               />
-              <Divider />
+              {i < props.todos.length - 1 && <Divider />}
             </>
           );
         })}

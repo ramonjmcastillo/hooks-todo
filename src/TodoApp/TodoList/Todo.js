@@ -13,7 +13,7 @@ const Todo = ({ task, completed, removeTodo, toggleTodo, id, editTodo }) => {
   const [isEditing, toggleIsEditing] = useToggleState(false);
 
   return (
-    <ListItem>
+    <ListItem style={{height: '64px'}}>
       {isEditing ? (
         <EditForm
           id={id}
